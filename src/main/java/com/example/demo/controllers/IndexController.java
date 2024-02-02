@@ -7,13 +7,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @RestController
-public class TestController {
+public class IndexController {
 
     private final TemporalCloudApiClient client = new TemporalCloudApiClient("saas-api.tmprl.cloud", 443);
 
     @GetMapping("/")
     public String doit() {
         StringBuilder html = new StringBuilder("<h2>Users</h2>");
+        html.append("<a href='/createUserForm'>Create User</a><br><br>");
         var users = client.getUsers();
         html.append("<table><tr><th>Id</th><th>Email</th><th>First Name</th><th>Created</th></tr>");
         for (var user : users) {
