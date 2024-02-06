@@ -14,3 +14,6 @@ Uses [Temporal's API Protobufs](https://github.com/temporalio/api-cloud) and a G
 ```
 
 Then visit `http://localhost:8080/` to see a list of users and namespaces for your Temporal Cloud account.
+
+*Debug Connection*
+Run SSLTest.java to test the connection to the Temporal Cloud API.
